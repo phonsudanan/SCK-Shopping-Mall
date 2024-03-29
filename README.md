@@ -10,6 +10,11 @@
 [Miro Board สำหรับออกแบบ Test Scenario Success ](https://miro.com/app/board/uXjVKcyxM6s=/?moveToWidget=3458764583831527361&cot=14)
 
 ---
+#### ส่งที่ต้องส่งมอบ
+- Test Scenarios Success บน Miro Board 
+- Test Source Code Robot Framework ระดับอนุบาล บน Github 
+- Test Source Code Robot Framework ระดับ ป.ตรี บน Github
+---
 
 ### แผนที่ 1 ส่งวันที่ 05/04/2023
 |วันที่|จำนวนชั่วโมงที่ใช้ทำงาน|Activity|

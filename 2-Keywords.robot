@@ -45,3 +45,11 @@ Resource    ${CURDIR}/1-Variables.robot
     ตรวจสอบตะกร้าสินค้า    ${inputProductName}  ${inputProductPrice}    ${inputProductQuantity}    ${inputProductPoint}    ${inputPointBalance}    ${inputTotalPrice}
 
     Element Text Should Be              ${enterPoint}              ${inputEnterPoint}
+
+เลือกรหัสไปรษณีย์
+    [Arguments]    ${postalCode}
+	IF  "${postalCode}" == "10330"
+	Click Element                    ${postalCode}
+	Wait Until Element Is Visible    ${postalCode10330}
+	Click Element    	             ${postalCode10330}
+	END

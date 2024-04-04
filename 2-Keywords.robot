@@ -53,3 +53,12 @@ Resource    ${CURDIR}/1-Variables.robot
 	Wait Until Element Is Visible    ${postalCode10330}
 	Click Element    	             ${postalCode10330}
 	END
+
+เลือกจังหวัด
+    [Arguments]    ${province}
+	IF  "${province}" == "กรุงเทพมหานคร"
+	Click Element                    ${province}
+	Wait Until Element Is Visible    ${provinceBangkok}
+	Click Element    	             ${provinceBangkok}
+	END
+	

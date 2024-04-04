@@ -44,9 +44,7 @@ Resource    ${CURDIR}/1-Variables.robot
 
 ตรวจสอบตะกร้าสินค้าหลังใส่ส่วนลด
     [Arguments]    ${inputProductName}  ${inputProductPrice}    ${inputProductQuantity}    ${inputProductPoint}    ${inputTotalPrice}    ${inputEnterPoint}
-
     ตรวจสอบตะกร้าสินค้า    ${inputProductName}  ${inputProductPrice}    ${inputProductQuantity}    ${inputProductPoint}    ${inputTotalPrice}
-
     Element Text Should Be              ${enterPoint}              ${inputEnterPoint}
 
 เลือกรหัสไปรษณีย์
@@ -74,7 +72,7 @@ Resource    ${CURDIR}/1-Variables.robot
 	END
 
 กรอกที่อยู่สำหรับการจัดส่ง
-    [Arguments]    ${inputFullName}    ${inputPhoneNumber}    ${inputHouseNo}    ${inputSubDistrict}    ${postalCode}    ${province}    ${district}
+    [Arguments]    ${inputFullName}    ${inputPhoneNumber}    ${postalCode}    ${province}    ${district}    ${inputSubDistrict}        ${inputHouseNo}
     Input Text                       ${fullName}                   ${inputFullName}
     Input Text                       ${phoneNumber}                ${inputPhoneNumber}
 	เลือกรหัสไปรษณีย์	                ${postalCode}
@@ -84,11 +82,11 @@ Resource    ${CURDIR}/1-Variables.robot
     Input Text                       ${houseNo}                    ${inputHouseNo}
 
 ตรวจสอบที่อยู่สำหรับการจัดส่ง
-    [Arguments]    ${inputFullName}    ${inputPhoneNumber}    ${inputHouseNo}    ${inputSubDistrict}    ${inputPostalCode}    ${inputProvince}    ${inputDistrict}
+    [Arguments]    ${inputFullName}    ${inputPhoneNumber}    ${inputPostalCode}    ${inputProvince}    ${inputDistrict}    ${inputSubDistrict}        ${inputHouseNo}
     Element Text Should Be           ${fullName}                   ${inputFullName}
     Element Text Should Be           ${phoneNumber}                ${inputPhoneNumber}
-    Element Text Should Be           ${houseNo}                    ${inputHouseNo}
-    Element Text Should Be           ${subDistrict}                ${inputSubDistrict}
-    Element Text Should Be           ${district}                   ${inputDistrict}
-    Element Text Should Be           ${province}                   ${inputProvince}
     Element Text Should Be           ${postalCode}                 ${inputPostalCode}
+    Element Text Should Be           ${province}                   ${inputProvince}
+    Element Text Should Be           ${district}                   ${inputDistrict}
+    Element Text Should Be           ${subDistrict}                ${inputSubDistrict}
+    Element Text Should Be           ${houseNo}                    ${inputHouseNo}

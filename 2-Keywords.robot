@@ -38,3 +38,10 @@ Resource    ${CURDIR}/1-Variables.robot
 ใช้แต้มเป็นส่วนลด
     [Arguments]    ${inputEnterPoint}
     Input Text                          ${enterPoint}               ${inputEnterPoint}
+
+ตรวจสอบตะกร้าสินค้าหลังใส่ส่วนลด
+    [Arguments]    ${inputProductName}  ${inputProductPrice}    ${inputProductQuantity}    ${inputProductPoint}    ${inputPointBalance}    ${inputTotalPrice}    ${inputEnterPoint}
+
+    ตรวจสอบตะกร้าสินค้า    ${inputProductName}  ${inputProductPrice}    ${inputProductQuantity}    ${inputProductPoint}    ${inputPointBalance}    ${inputTotalPrice}
+
+    Element Text Should Be              ${enterPoint}              ${inputEnterPoint}

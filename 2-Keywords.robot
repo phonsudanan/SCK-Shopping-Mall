@@ -15,7 +15,7 @@ Resource    ${CURDIR}/1-Variables.robot
 ตรวจสอบรายละเอียดสินค้า
     [Arguments]    ${inputProductName}  ${inputProductPrice}       ${inputProductPoint}
 	Wait Until Page Contains Element    ${productBurberry}
-    Element Text Should Be              ${productName_1}           ${inputProductName}
+    Element Text Should Be              ${productBurberry}         ${inputProductName}
     Element Text Should Be              ${productPrice_1}          ${inputProductPrice}
     Element Text Should Be              ${productPoint_1}          ${inputProductPoint}
 

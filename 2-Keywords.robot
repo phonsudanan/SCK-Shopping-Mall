@@ -69,3 +69,13 @@ Resource    ${CURDIR}/1-Variables.robot
 	Wait Until Element Is Visible    ${districtPathumwan}
 	Click Element    	             ${districtPathumwan}
 	END
+
+กรอกที่อยู่สำหรับการจัดส่ง
+    [Arguments]    ${inputFullName}    ${inputPhoneNumber}    ${inputHouseNo}    ${inputSubDistrict}    ${postalCode}    ${province}    ${district}
+    Input Text                       ${fullName}                   ${inputFullName}
+    Input Text                       ${phoneNumber}                ${inputPhoneNumber}
+	เลือกรหัสไปรษณีย์	                ${postalCode}
+	เลือกจังหวัด	                    ${province}
+	เลือกอำเภอ		                  ${district}
+    Input Text                       ${subDistrict}                ${inputSubDistrict}
+    Input Text                       ${houseNo}                    ${inputHouseNo}

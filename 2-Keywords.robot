@@ -34,3 +34,7 @@ Resource    ${CURDIR}/1-Variables.robot
     Element Text Should Be              ${productPoint_1}          ${inputProductPoint}
     Element Text Should Be              ${pointBalance}            ${inputPointBalance}
     Element Text Should Be              ${totalPrice}              ${inputTotalPrice}
+
+ใช้แต้มเป็นส่วนลด
+    [Arguments]    ${inputEnterPoint}
+    Input Text                          ${enterPoint}               ${inputEnterPoint}

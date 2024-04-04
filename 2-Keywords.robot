@@ -79,3 +79,13 @@ Resource    ${CURDIR}/1-Variables.robot
 	เลือกอำเภอ		                  ${district}
     Input Text                       ${subDistrict}                ${inputSubDistrict}
     Input Text                       ${houseNo}                    ${inputHouseNo}
+
+ตรวจสอบที่อยู่สำหรับการจัดส่ง
+    [Arguments]    ${inputFullName}    ${inputPhoneNumber}    ${inputHouseNo}    ${inputSubDistrict}    ${inputPostalCode}    ${inputProvince}    ${inputDistrict}
+    Element Text Should Be           ${fullName}                   ${inputFullName}
+    Element Text Should Be           ${phoneNumber}                ${inputPhoneNumber}
+    Element Text Should Be           ${houseNo}                    ${inputHouseNo}
+    Element Text Should Be           ${subDistrict}                ${inputSubDistrict}
+    Element Text Should Be           ${district}                   ${inputDistrict}
+    Element Text Should Be           ${province}                   ${inputProvince}
+    Element Text Should Be           ${postalCode}                 ${inputPostalCode}

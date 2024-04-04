@@ -21,3 +21,7 @@ Resource    ${CURDIR}/1-Variables.robot
 
 เพิ่มสินค้าลงตะกร้า
     Click Element                       ${add_product_1}
+
+ไปที่ตะกร้าสินค้า
+    Click Element                       ${shoppingCart}
+    Wait Until Page Contains Element    ${orderList}

@@ -61,4 +61,11 @@ Resource    ${CURDIR}/1-Variables.robot
 	Wait Until Element Is Visible    ${provinceBangkok}
 	Click Element    	             ${provinceBangkok}
 	END
-	
+
+เลือกอำเภอ
+    [Arguments]    ${district}
+	IF  "${district}" == "ปทุมวัน"
+	Click Element                    ${district}
+	Wait Until Element Is Visible    ${districtPathumwan}
+	Click Element    	             ${districtPathumwan}
+	END

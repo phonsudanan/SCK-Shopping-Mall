@@ -25,3 +25,12 @@ Resource    ${CURDIR}/1-Variables.robot
 ไปที่ตะกร้าสินค้า
     Click Element                       ${shoppingCart}
     Wait Until Page Contains Element    ${orderList}
+
+ตรวจสอบตะกร้าสินค้า
+    [Arguments]    ${inputProductName}  ${inputProductPrice}    ${inputProductQuantity}    ${inputProductPoint}    ${inputPointBalance}    ${inputTotalPrice}
+    Element Text Should Be              ${productName_1}           ${inputProductName}
+    Element Text Should Be              ${productPrice_1}          ${inputProductPrice}
+    Element Text Should Be              ${productQuantity}         ${inputProductQuantity}
+    Element Text Should Be              ${productPoint_1}          ${inputProductPoint}
+    Element Text Should Be              ${pointBalance}            ${inputPointBalance}
+    Element Text Should Be              ${totalPrice}              ${inputTotalPrice}

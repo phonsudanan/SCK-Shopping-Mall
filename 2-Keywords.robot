@@ -27,22 +27,25 @@ Resource    ${CURDIR}/1-Variables.robot
     Wait Until Page Contains Element    ${orderList}
 
 ตรวจสอบตะกร้าสินค้า
-    [Arguments]    ${inputProductName}  ${inputProductPrice}    ${inputProductQuantity}    ${inputProductPoint}    ${inputPointBalance}    ${inputTotalPrice}
+    [Arguments]    ${inputProductName}  ${inputProductPrice}    ${inputProductQuantity}    ${inputProductPoint}    ${inputTotalPrice}
     Element Text Should Be              ${productName_1}           ${inputProductName}
     Element Text Should Be              ${productPrice_1}          ${inputProductPrice}
     Element Text Should Be              ${productQuantity}         ${inputProductQuantity}
     Element Text Should Be              ${productPoint_1}          ${inputProductPoint}
-    Element Text Should Be              ${pointBalance}            ${inputPointBalance}
     Element Text Should Be              ${totalPrice}              ${inputTotalPrice}
+
+ตรวจสอบแต้มคงเหลือ
+    [Arguments]    ${inputPointBalance}
+    Element Text Should Be              ${pointBalance}            ${inputPointBalance}
 
 ใช้แต้มเป็นส่วนลด
     [Arguments]    ${inputEnterPoint}
     Input Text                          ${enterPoint}               ${inputEnterPoint}
 
 ตรวจสอบตะกร้าสินค้าหลังใส่ส่วนลด
-    [Arguments]    ${inputProductName}  ${inputProductPrice}    ${inputProductQuantity}    ${inputProductPoint}    ${inputPointBalance}    ${inputTotalPrice}    ${inputEnterPoint}
+    [Arguments]    ${inputProductName}  ${inputProductPrice}    ${inputProductQuantity}    ${inputProductPoint}    ${inputTotalPrice}    ${inputEnterPoint}
 
-    ตรวจสอบตะกร้าสินค้า    ${inputProductName}  ${inputProductPrice}    ${inputProductQuantity}    ${inputProductPoint}    ${inputPointBalance}    ${inputTotalPrice}
+    ตรวจสอบตะกร้าสินค้า    ${inputProductName}  ${inputProductPrice}    ${inputProductQuantity}    ${inputProductPoint}    ${inputTotalPrice}
 
     Element Text Should Be              ${enterPoint}              ${inputEnterPoint}
 

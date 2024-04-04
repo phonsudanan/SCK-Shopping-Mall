@@ -18,3 +18,6 @@ Resource    ${CURDIR}/1-Variables.robot
     Element Text Should Be              ${productName_1}           ${inputProductName}
     Element Text Should Be              ${productPrice_1}          ${inputProductPrice}
     Element Text Should Be              ${productPoint_1}          ${inputProductPoint}
+
+เพิ่มสินค้าลงตะกร้า
+    Click Element                       ${add_product_1}

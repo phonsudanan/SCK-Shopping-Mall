@@ -33,6 +33,10 @@ ${district}                               id=district    #อำเภอ
 ${districtPathumwan}                      id=districtPathumwan    #ปทุมวัน
 ${subDistrict}                            id=subDistrict    #ตำบล
 ${houseNo}                                id=houseNo    #บ้านเลขที่
+${btConfirmAddress}                       id=confirmAddress    #ปุ่มตกลงยืนยันที่อยู่
+${confirmFullName}                        id=confirmFullName    #ชื่อ
+${confirmPhoneNumber}                     id=confirmPhoneNumber    #เบอร์
+${confirmAddress}                         id=confirmAddress    #ยืนยันที่อยู่
 
 ${selectShippingCharges}                  id=selectShippingCharges    #เลือกการจัดส่ง
 ${kerry}                                  id=kerryRadioButton    #เลือกการจัดส่ง เคอรี่

@@ -1,5 +1,4 @@
 *** Settings ***
-Library     SeleniumLibrary
 Resource    ${CURDIR}/1-Variables.robot
 
 *** Keywords ***
@@ -41,6 +40,7 @@ Resource    ${CURDIR}/1-Variables.robot
 ใช้แต้มเป็นส่วนลด
     [Arguments]    ${inputEnterPoint}
     Input Text                          ${enterPoint}               ${inputEnterPoint}
+    Press Keys                          ${enterPoint}               ENTER
 
 ตรวจสอบตะกร้าสินค้าหลังใส่ส่วนลด
     [Arguments]    ${inputProductName}  ${inputProductPrice}    ${inputProductQuantity}    ${inputProductPoint}    ${inputTotalPrice}    ${inputEnterPoint}
@@ -88,3 +88,4 @@ Resource    ${CURDIR}/1-Variables.robot
     Element Text Should Be           ${confirmFullName}             ${inputFullName}
     Element Text Should Be           ${confirmPhoneNumber}          ${inputPhoneNumber}
     Element Text Should Be           ${confirmAddress}              ${inputAddress}
+

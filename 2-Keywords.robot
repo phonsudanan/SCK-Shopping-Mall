@@ -73,6 +73,8 @@ Resource    ${CURDIR}/1-Variables.robot
 
 กรอกที่อยู่สำหรับการจัดส่ง
     Click Element                   ${createAnOrderButton}
+    Click Element                   ${address}
+    Wait Until Element Is Visible   ${confirmAddress}
     [Arguments]    ${inputFullName}    ${inputPhoneNumber}    ${postalCode}    ${province}    ${district}    ${inputSubDistrict}        ${inputHouseNo}
     Input Text                       ${fullName}                   ${inputFullName}
     Input Text                       ${phoneNumber}                ${inputPhoneNumber}

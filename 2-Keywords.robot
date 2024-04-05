@@ -91,3 +91,9 @@ Resource    ${CURDIR}/1-Variables.robot
     Element Text Should Be           ${confirmPhoneNumber}          ${inputPhoneNumber}
     Element Text Should Be           ${confirmAddress}              ${inputAddress}
 
+เลือกการจัดส่ง
+    Click Element    ${selectShippingCharges}
+    [Arguments]      ${inputShippingCharges}
+    Select Radio Button              ${shippingCharge}              ${inputShippingCharges}
+    Click Element                    ${confirmselectShippingCharges}
+

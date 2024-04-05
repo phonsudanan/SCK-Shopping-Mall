@@ -97,3 +97,8 @@ Resource    ${CURDIR}/1-Variables.robot
     Select Radio Button              ${shippingCharge}              ${inputShippingCharges}
     Click Element                    ${confirmselectShippingCharges}
 
+ตรวจสอบหลังจากการเลือกช่องทางการจัดส่ง
+    [Arguments]    ${inputShippingCharges}    ${inputShippingCost}    ${inputTotalPrice}
+    Element Text Should Be           ${selectShippingCharges}        ${inputShippingCharges}
+    Element Text Should Be           ${shippingCost}                 ${inputShippingCost}
+    Element Text Should Be           ${totalPrice}                   ${inputTotalPrice}

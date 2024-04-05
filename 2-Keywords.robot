@@ -102,3 +102,9 @@ Resource    ${CURDIR}/1-Variables.robot
     Element Text Should Be           ${selectShippingCharges}        ${inputShippingCharges}
     Element Text Should Be           ${shippingCost}                 ${inputShippingCost}
     Element Text Should Be           ${totalPrice}                   ${inputTotalPrice}
+
+เลือกช่องทางการชำระเงิน
+    Click Element    ${selectPayments}
+    [Arguments]      ${inputPayments}
+    Select Radio Button              ${payments}                     ${inputPayments}
+    Click Element                    ${confirmselectPayments}

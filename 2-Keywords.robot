@@ -72,6 +72,7 @@ Resource    ${CURDIR}/1-Variables.robot
 	END
 
 กรอกที่อยู่สำหรับการจัดส่ง
+    Click Element                   ${createAnOrderButton}
     [Arguments]    ${inputFullName}    ${inputPhoneNumber}    ${postalCode}    ${province}    ${district}    ${inputSubDistrict}        ${inputHouseNo}
     Input Text                       ${fullName}                   ${inputFullName}
     Input Text                       ${phoneNumber}                ${inputPhoneNumber}
@@ -80,13 +81,10 @@ Resource    ${CURDIR}/1-Variables.robot
 	เลือกอำเภอ		                  ${district}
     Input Text                       ${subDistrict}                ${inputSubDistrict}
     Input Text                       ${houseNo}                    ${inputHouseNo}
+    Click Element                    ${confirmAddress}
 
 ตรวจสอบที่อยู่สำหรับการจัดส่ง
-    [Arguments]    ${inputFullName}    ${inputPhoneNumber}    ${inputPostalCode}    ${inputProvince}    ${inputDistrict}    ${inputSubDistrict}        ${inputHouseNo}
-    Element Text Should Be           ${fullName}                   ${inputFullName}
-    Element Text Should Be           ${phoneNumber}                ${inputPhoneNumber}
-    Element Text Should Be           ${postalCode}                 ${inputPostalCode}
-    Element Text Should Be           ${province}                   ${inputProvince}
-    Element Text Should Be           ${district}                   ${inputDistrict}
-    Element Text Should Be           ${subDistrict}                ${inputSubDistrict}
-    Element Text Should Be           ${houseNo}                    ${inputHouseNo}
+    [Arguments]    ${inputFullName}    ${inputPhoneNumber}    ${inputAddress}
+    Element Text Should Be           ${confirmFullName}             ${inputFullName}
+    Element Text Should Be           ${confirmPhoneNumber}          ${inputPhoneNumber}
+    Element Text Should Be           ${confirmAddress}              ${inputAddress}

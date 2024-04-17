@@ -109,9 +109,13 @@ Resource    ${CURDIR}/1-Variables.robot
     Select Radio Button              ${payments}                     ${inputPayments}
     Click Element                    ${confirmSelectPayments}
 
-ตรวจสอบการชำระเงิน
-    [Arguments]    ${inputTotalPrice}    ${inputOrderNumber}
+ชำระเงิน
+    [Arguments]    ${inputTotalPrice}
     Click Element    ${confirmPayments}
+    Wait Until Element Is Visible    ${imageQRPromptPay}
     Element Text Should Be           ${totalPrice}                   ${inputTotalPrice}
+
+ตรวจสอบการชำระเงิน
+    [Arguments]    ${inputOrderNumber}
     Wait Until Page Contains Element         ${orderComplete}
     Element Text Should Be           ${orderNumber}                  ${inputOrderNumber}

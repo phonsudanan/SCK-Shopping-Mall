@@ -1,5 +1,6 @@
 *** Settings ***
 Library    SeleniumLibrary
+Suite Teardown    Close All Browsers
 
 *** Test Cases ***
 TSS-SCK_SHP001

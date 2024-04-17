@@ -104,7 +104,10 @@ Resource    ${CURDIR}/1-Variables.robot
     Element Text Should Be           ${totalPrice}                   ${inputTotalPrice}
 
 เลือกช่องทางการชำระเงิน
-    Click Element    ${selectPayments}
     [Arguments]      ${inputPayments}
+    Click Element    ${selectPayments}
     Select Radio Button              ${payments}                     ${inputPayments}
-    Click Element                    ${confirmselectPayments}
+    Click Element                    ${confirmSelectPayments}
+
+
+    

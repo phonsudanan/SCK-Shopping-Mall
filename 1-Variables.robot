@@ -48,7 +48,7 @@ ${payments}                               id=paymentsRadioButton    #เลื�
 ${confirmSelectPayments}                  id=confirmSelectPayments    #ยืนยันเลือกการชำระเงิน
 
 ${confirmPayments}                        id=confirmPayments    #ยืนยันการชำระเงิน
-${imageQRPromptPay}                       id={imageQRPromptPay}
+${imageQRPromptPay}                       id=imageQRPromptPay
 ${orderComplete}                          id=orderComplete
 ${orderNumber}                            id=orderNumber
 

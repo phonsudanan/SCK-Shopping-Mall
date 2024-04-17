@@ -23,6 +23,7 @@ ${enterPoint}                             id=inputEnterPoint    #ใช้แต
 ${totalPrice}                             id=totalPrice    #รวมค่าสินค้า
 
 ${createAnOrderButton}                    id=createAnOrderButton    #ปุ่ม Next ตะกร้าสินค้า คลิกเพื่อเข้าสู่ขั้นตอนการชำระเงิน
+${address}                                id=address    #คลิกเพื่อกรอกที่อยู่
 ${fullName}                               id=fullName    #ชื่อ
 ${phoneNumber}                            id=phoneNumber    #เบอร์
 ${postalCode}                             id=postalCode    #รหัสไปรษณีย์
@@ -39,12 +40,17 @@ ${confirmPhoneNumber}                     id=confirmPhoneNumber    #เบอร
 ${confirmAddress}                         id=confirmAddress    #ยืนยันที่อยู่
 
 ${selectShippingCharges}                  id=selectShippingCharges    #เลือกการจัดส่ง
-${kerry}                                  id=kerryRadioButton    #เลือกการจัดส่ง เคอรี่
+${shippingCharge}                         id=shippingCharge    #เลือกการจัดส่ง กรุ๊ป
 ${confirmselectShippingCharges}           id=confirmShippingCharges    #ยืนยันเลือกการจัดส่ง
+${shippingCost}                           id=shippingCost    #ราคาค่าส่ง
 ${selectPayments}                         id=selectPayments    #เลือกการช่องทางการชำระเงิน
-${selectPromptPayQRPromptPay}             id=QRPromptPayRadioButton    #เลือกการชำระเงิน PromptPay
-${confirmselectPayments}                  id=confirmselectPayments    #ยืนยันเลือกการชำระเงิน
+${payments}                               id=paymentsRadioButton    #เลือกการชำระเงิน PromptPay
+${confirmSelectPayments}                  id=confirmSelectPayments    #ยืนยันเลือกการชำระเงิน
+
 ${confirmPayments}                        id=confirmPayments    #ยืนยันการชำระเงิน
+${imageQRPromptPay}                       id={imageQRPromptPay}
+${orderComplete}                          id=orderComplete
+${orderNumber}                            id=orderNumber
 
 
 
